@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>嗜食候</title>
+</head>
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    .dropdown-menu-right {
+        right: 0px;
+        left: auto;
+    }
+
+    .bg-cover {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .box-shadow {
+        box-shadow: 3px 2px 10px;
+        transition: 1s;
+    }
+
+    .box-shadow:hover {
+        box-shadow: 3px 3px 20px black;
+    }
+
+    .list-group a:hover {
+        background-color: rgb(113, 162, 236);
+    }
+
+    .alert-rounded {
+        border-radius: 50px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a href="index.html" style="color: lightseagreen;">
+            <i class="fas fa-heart"></i>
+            六角血拚買賣</a>
+        <div class="dropdown ml-auto">
+            <button type="submit"
+                style="position: relative; cursor: pointer; background-color: transparent; border: none;" type="button"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-shopping-cart fa-2x"></i>
+                <span class="badge badge-pill badge-danger" style="left: 25px; top: 0px; position: absolute;">99</span>
+            </button>
+            <div class="dropdown ">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton"
+                    style="min-width: 300px;">
+                    <div class="px-4 py-3">
+                        <h6>已選擇商品</h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr class="align-middle text-center">
+                                    <th scope="col"></th>
+                                    <th scope="col">品項</th>
+                                    <th scope="col">單位</th>
+                                    <th scope="col">金額</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-trash"></i></th>
+                                    <td">馬卡龍</td>
+                                        <td>一件</td>
+                                        <td>9999元</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-trash"></i></th>
+                                    <td>慕斯蛋糕</td>
+                                    <td>一件</td>
+                                    <td>9999元</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="#" class="btn btn-outline-primary btn-block">結帳</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-3">
+        <h2 class="text-center">結帳</h2>
+        <div class="form-row text-center">
+            <div class="col-lg-4 col-12">
+                <div class="alert alert-success alert-rounded" role="alert">
+                    基本資料
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <div class="alert alert-secondary alert-rounded" role="alert">
+                    支付工具
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <div class="alert alert-secondary alert-rounded" role="alert">
+                    完成訂單
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div id="accordion">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0 d-flex">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            顯示購物車細節
+                        </button>
+                        <div class="ml-auto">
+                            <h3>$999</h3>
+                        </div>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr class="align-middle">
+                                    <th scope="col"></th>
+                                    <th scope="col">品項</th>
+                                    <th scope="col">單位</th>
+                                    <th scope="col" class="text-center">金額</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-trash" style="cursor: pointer;"></i></th>
+                                    <td>馬卡龍</td>
+                                    <td>一件</td>
+                                    <td class="text-right">9999元</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="fas fa-trash" style="cursor: pointer;"><img class="card-img-top"
+                                                src="https://images.unsplash.com/photo-1588484588657-0bbbee05132f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGZyZW5jaCUyMGRlc3NlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                                alt="Card image cap" style="width: 100px; height: 100px;"></i></th>
+                                    <td>慕斯蛋糕</td>
+                                    <td>一件</td>
+                                    <td class="text-right">9999元</td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td></td>
+                                    <td class="text-right" style="font-size: 18px; font-weight: bold;">運費</td>
+                                    <td class="text-right" style="font-size: 18px; font-weight: bolder;">60元</td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td></td>
+                                    <td class="text-right" style="font-size: 20px; font-weight: bolder;">合計</td>
+                                    <td class="text-right" style="font-size: 18px; font-weight: bolder;">10,059元</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <form>
+                            <div>
+                                <h2 class="bg-light text-center py-2">訂購人資訊</h2>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">姓名</label>
+                                    <input type="name" class="form-control" id="inputname" placeholder="name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputcountry">國家</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>請選擇</option>
+                                        <option>
+                                        <option value='AD'>[AD]安道爾</option>
+                                        <option value='AE'>[AE]阿拉伯聯合大公國</option>
+                                        <option value='AF'>[AF]阿富汗</option>
+                                        <option value='AG'>[AG]安地卡巴布達</option>
+                                        <option value='AI'>[AI]安圭拉</option>
+                                        <option value='AL'>[AL]阿爾巴尼亞</option>
+                                        <option value='AM'>[AM]亞美尼亞</option>
+                                        <option value='AN'>[AN]荷屬安地列斯</option>
+                                        <option value='AO'>[AO]安哥拉</option>
+                                        <option value='AQ'>[AQ]南極洲</option>
+                                        <option value='AR'>[AR]阿根廷</option>
+                                        <option value='AS'>[AS]美屬薩摩亞</option>
+                                        <option value='AT'>[AT]奧地利</option>
+                                        <option value='AU'>[AU]澳大利亞</option>
+                                        <option value='AW'>[AW]阿魯巴</option>
+                                        <option value='AX'>[AX]奧蘭群島</option>
+                                        <option value='AZ'>[AZ]亞塞拜然</option>
+                                        <option value='BA'>[BA]波士尼亞赫塞哥維納</option>
+                                        <option value='BB'>[BB]巴貝多</option>
+                                        <option value='BD'>[BD]孟加拉</option>
+                                        <option value='BE'>[BE]比利時</option>
+                                        <option value='BF'>[BF]布吉納法索</option>
+                                        <option value='BG'>[BG]保加利亞</option>
+                                        <option value='BH'>[BH]巴林</option>
+                                        <option value='BI'>[BI]蒲隆地</option>
+                                        <option value='BJ'>[BJ]貝南</option>
+                                        <option value='BM'>[BM]百慕達</option>
+                                        <option value='BN'>[BN]汶萊</option>
+                                        <option value='BO'>[BO]玻利維亞</option>
+                                        <option value='BR'>[BR]巴西</option>
+                                        <option value='BS'>[BS]巴哈馬</option>
+                                        <option value='BT'>[BT]不丹</option>
+                                        <option value='BV'>[BV]波維特島</option>
+                                        <option value='BW'>[BW]波札那</option>
+                                        <option value='BY'>[BY]白俄羅斯</option>
+                                        <option value='BZ'>[BZ]貝里斯</option>
+                                        <option value='CA'>[CA]加拿大</option>
+                                        <option value='CC'>[CC]可可斯群島</option>
+                                        <option value='CD'>[CD]剛果民主共和國</option>
+                                        <option value='CF'>[CF]中非共和國</option>
+                                        <option value='CG'>[CG]剛果</option>
+                                        <option value='CH'>[CH]瑞士</option>
+                                        <option value='CI'>[CI]象牙海岸</option>
+                                        <option value='CK'>[CK]庫克群島</option>
+                                        <option value='CL'>[CL]智利</option>
+                                        <option value='CM'>[CM]喀麥隆</option>
+                                        <option value='CN'>[CN]中國</option>
+                                        <option value='CO'>[CO]哥倫比亞</option>
+                                        <option value='CR'>[CR]哥斯大黎加</option>
+                                        <option value='CU'>[CU]古巴</option>
+                                        <option value='CV'>[CV]維德角</option>
+                                        <option value='CX'>[CX]聖誕島</option>
+                                        <option value='CY'>[CY]賽普勒斯</option>
+                                        <option value='CZ'>[CZ]捷克</option>
+                                        <option value='DE'>[DE]德國</option>
+                                        <option value='DJ'>[DJ]吉布地</option>
+                                        <option value='DK'>[DK]丹麥</option>
+                                        <option value='DM'>[DM]多米尼克</option>
+                                        <option value='DO'>[DO]多明尼加</option>
+                                        <option value='DZ'>[DZ]阿爾及利亞</option>
+                                        <option value='EC'>[EC]厄瓜多</option>
+                                        <option value='EE'>[EE]愛沙尼亞</option>
+                                        <option value='EG'>[EG]埃及</option>
+                                        <option value='EH'>[EH]西撒哈拉</option>
+                                        <option value='ER'>[ER]厄利垂亞</option>
+                                        <option value='ES'>[ES]西班牙</option>
+                                        <option value='ET'>[ET]衣索比亞</option>
+                                        <option value='FI'>[FI]芬蘭</option>
+                                        <option value='FJ'>[FJ]斐濟</option>
+                                        <option value='FK'>[FK]福克蘭群島</option>
+                                        <option value='FM'>[FM]密克羅尼西亞聯邦</option>
+                                        <option value='FO'>[FO]法羅群島</option>
+                                        <option value='FR'>[FR]法國</option>
+                                        <option value='GA'>[GA]加彭</option>
+                                        <option value='GB'>[GB]英國</option>
+                                        <option value='GD'>[GD]格瑞那達</option>
+                                        <option value='GE'>[GE]喬治亞</option>
+                                        <option value='GF'>[GF]法屬圭亞那</option>
+                                        <option value='GG'>[GG]根息</option>
+                                        <option value='GH'>[GH]迦納</option>
+                                        <option value='GI'>[GI]直布羅陀</option>
+                                        <option value='GL'>[GL]格陵蘭</option>
+                                        <option value='GM'>[GM]甘比亞</option>
+                                        <option value='GN'>[GN]幾內亞</option>
+                                        <option value='GP'>[GP]哥德洛普</option>
+                                        <option value='GQ'>[GQ]赤道幾內亞</option>
+                                        <option value='GR'>[GR]希臘</option>
+                                        <option value='GS'>[GS]南喬治亞南桑威奇群島</option>
+                                        <option value='GT'>[GT]瓜地馬拉</option>
+                                        <option value='GU'>[GU]關島</option>
+                                        <option value='GW'>[GW]幾內亞比索</option>
+                                        <option value='GY'>[GY]蓋亞那</option>
+                                        <option value='HK'>[HK]香港</option>
+                                        <option value='HM'>[HM]赫德麥當勞群島</option>
+                                        <option value='HN'>[HN]宏都拉斯</option>
+                                        <option value='HR'>[HR]克羅埃西亞</option>
+                                        <option value='HT'>[HT]海地</option>
+                                        <option value='HU'>[HU]匈牙利</option>
+                                        <option value='ID'>[ID]印尼</option>
+                                        <option value='IE'>[IE]愛爾蘭</option>
+                                        <option value='IL'>[IL]以色列</option>
+                                        <option value='IM'>[IM]曼島</option>
+                                        <option value='IN'>[IN]印度</option>
+                                        <option value='IO'>[IO]英屬印度洋地區</option>
+                                        <option value='IQ'>[IQ]伊拉克</option>
+                                        <option value='IR'>[IR]伊朗</option>
+                                        <option value='IS'>[IS]冰島</option>
+                                        <option value='IT'>[IT]義大利</option>
+                                        <option value='JE'>[JE]澤西</option>
+                                        <option value='JM'>[JM]牙買加</option>
+                                        <option value='JO'>[JO]約旦</option>
+                                        <option value='JP'>[JP]日本</option>
+                                        <option value='KE'>[KE]肯亞</option>
+                                        <option value='KG'>[KG]吉爾吉斯</option>
+                                        <option value='KH'>[KH]柬埔寨</option>
+                                        <option value='KI'>[KI]吉里巴斯</option>
+                                        <option value='KM'>[KM]葛摩</option>
+                                        <option value='KN'>[KN]聖克里斯多福</option>
+                                        <option value='KP'>[KP]北韓</option>
+                                        <option value='KR'>[KR]南韓</option>
+                                        <option value='KW'>[KW]科威特</option>
+                                        <option value='KY'>[KY]開曼群島</option>
+                                        <option value='KZ'>[KZ]哈薩克</option>
+                                        <option value='LA'>[LA]寮國</option>
+                                        <option value='LB'>[LB]黎巴嫩</option>
+                                        <option value='LC'>[LC]聖露西亞</option>
+                                        <option value='LI'>[LI]列支敦斯登</option>
+                                        <option value='LK'>[LK]斯里蘭卡</option>
+                                        <option value='LR'>[LR]賴比瑞亞</option>
+                                        <option value='LS'>[LS]賴索托</option>
+                                        <option value='LT'>[LT]立陶宛</option>
+                                        <option value='LU'>[LU]盧森堡</option>
+                                        <option value='LV'>[LV]拉脫維亞</option>
+                                        <option value='LY'>[LY]利比亞</option>
+                                        <option value='MA'>[MA]摩洛哥</option>
+                                        <option value='MC'>[MC]摩納哥</option>
+                                        <option value='MD'>[MD]摩爾多瓦</option>
+                                        <option value='ME'>[ME]蒙特內哥羅</option>
+                                        <option value='MG'>[MG]馬達加斯加</option>
+                                        <option value='MH'>[MH]馬紹爾群島</option>
+                                        <option value='MK'>[MK]馬其頓</option>
+                                        <option value='ML'>[ML]馬利</option>
+                                        <option value='MM'>[MM]緬甸</option>
+                                        <option value='MN'>[MN]蒙古</option>
+                                        <option value='MO'>[MO]澳門</option>
+                                        <option value='MP'>[MP]北馬里亞納群島</option>
+                                        <option value='MQ'>[MQ]馬丁尼克</option>
+                                        <option value='MR'>[MR]茅利塔尼亞</option>
+                                        <option value='MS'>[MS]蒙特色拉</option>
+                                        <option value='MT'>[MT]馬爾他</option>
+                                        <option value='MU'>[MU]模里西斯</option>
+                                        <option value='MV'>[MV]馬爾地夫</option>
+                                        <option value='MW'>[MW]馬拉威</option>
+                                        <option value='MX'>[MX]墨西哥</option>
+                                        <option value='MY'>[MY]馬來西亞</option>
+                                        <option value='MZ'>[MZ]莫三比克</option>
+                                        <option value='NA'>[NA]納米比亞</option>
+                                        <option value='NC'>[NC]新喀里多尼亞</option>
+                                        <option value='NE'>[NE]尼日</option>
+                                        <option value='NF'>[NF]諾福克島</option>
+                                        <option value='NG'>[NG]奈及利亞</option>
+                                        <option value='NI'>[NI]尼加拉瓜</option>
+                                        <option value='NL'>[NL]荷蘭</option>
+                                        <option value='NO'>[NO]挪威</option>
+                                        <option value='NP'>[NP]尼泊爾</option>
+                                        <option value='NR'>[NR]諾魯</option>
+                                        <option value='NU'>[NU]紐埃</option>
+                                        <option value='NZ'>[NZ]紐西蘭</option>
+                                        <option value='OM'>[OM]阿曼</option>
+                                        <option value='PA'>[PA]巴拿馬</option>
+                                        <option value='PE'>[PE]秘魯</option>
+                                        <option value='PF'>[PF]法屬波里尼西亞</option>
+                                        <option value='PG'>[PG]巴布亞紐幾內亞</option>
+                                        <option value='PH'>[PH]菲律賓</option>
+                                        <option value='PK'>[PK]巴基斯坦</option>
+                                        <option value='PL'>[PL]波蘭</option>
+                                        <option value='PM'>[PM]聖皮耶密克隆</option>
+                                        <option value='PN'>[PN]皮特康</option>
+                                        <option value='PR'>[PR]波多黎各</option>
+                                        <option value='PS'>[PS]巴勒斯坦</option>
+                                        <option value='PT'>[PT]葡萄牙</option>
+                                        <option value='PW'>[PW]帛琉</option>
+                                        <option value='PY'>[PY]巴拉圭</option>
+                                        <option value='QA'>[QA]卡達</option>
+                                        <option value='RE'>[RE]留尼旺</option>
+                                        <option value='RO'>[RO]羅馬尼亞</option>
+                                        <option value='RS'>[RS]塞爾維亞</option>
+                                        <option value='RU'>[RU]俄羅斯</option>
+                                        <option value='RW'>[RW]盧安達</option>
+                                        <option value='SA'>[SA]沙烏地阿拉伯</option>
+                                        <option value='SB'>[SB]索羅門群島</option>
+                                        <option value='SC'>[SC]塞席爾</option>
+                                        <option value='SD'>[SD]蘇丹</option>
+                                        <option value='SE'>[SE]瑞典</option>
+                                        <option value='SG'>[SG]新加坡</option>
+                                        <option value='SH'>[SH]聖赫勒拿</option>
+                                        <option value='SI'>[SI]斯洛維尼亞</option>
+                                        <option value='SJ'>[SJ]斯瓦爾巴尖棉</option>
+                                        <option value='SK'>[SK]斯洛伐克</option>
+                                        <option value='SL'>[SL]獅子山</option>
+                                        <option value='SM'>[SM]聖馬利諾</option>
+                                        <option value='SN'>[SN]塞內加爾</option>
+                                        <option value='SO'>[SO]索馬利亞</option>
+                                        <option value='SR'>[SR]蘇利南</option>
+                                        <option value='ST'>[ST]聖多美普林西比</option>
+                                        <option value='SV'>[SV]薩爾瓦多</option>
+                                        <option value='SY'>[SY]敘利亞</option>
+                                        <option value='SZ'>[SZ]史瓦濟蘭</option>
+                                        <option value='TC'>[TC]托克斯寇克斯群島</option>
+                                        <option value='TD'>[TD]查德</option>
+                                        <option value='TF'>[TF]法屬南部屬地</option>
+                                        <option value='TG'>[TG]多哥</option>
+                                        <option value='TH'>[TH]泰國</option>
+                                        <option value='TJ'>[TJ]塔吉克</option>
+                                        <option value='TK'>[TK]托克勞</option>
+                                        <option value='TL'>[TL]東帝汶</option>
+                                        <option value='TM'>[TM]土庫曼</option>
+                                        <option value='TN'>[TN]突尼西亞</option>
+                                        <option value='TO'>[TO]東加</option>
+                                        <option value='TR'>[TR]土耳其</option>
+                                        <option value='TT'>[TT]千里達托貝哥</option>
+                                        <option value='TV'>[TV]吐瓦魯</option>
+                                        <option value='TW'>[TW]台灣</option>
+                                        <option value='TZ'>[TZ]坦尚尼亞</option>
+                                        <option value='UA'>[UA]烏克蘭</option>
+                                        <option value='UG'>[UG]烏干達</option>
+                                        <option value='UM'>[UM]美屬邊疆群島</option>
+                                        <option value='US'>[US]美國</option>
+                                        <option value='UY'>[UY]烏拉圭</option>
+                                        <option value='UZ'>[UZ]烏茲別克</option>
+                                        <option value='VA'>[VA]教廷(梵蒂岡)</option>
+                                        <option value='VC'>[VC]聖文森</option>
+                                        <option value='VE'>[VE]委內瑞拉</option>
+                                        <option value='VG'>[VG]英屬維爾京群島</option>
+                                        <option value='VI'>[VI]美屬維京群島</option>
+                                        <option value='VN'>[VN]越南</option>
+                                        <option value='VU'>[VU]萬那杜</option>
+                                        <option value='WF'>[WF]華里斯福他納</option>
+                                        <option value='WS'>[WS]薩摩亞</option>
+                                        <option value='YE'>[YE]葉門</option>
+                                        <option value='YT'>[YT]美亞特</option>
+                                        <option value='ZA'>[ZA]南非</option>
+                                        <option value='ZM'>[ZM]尚比亞</option>
+                                        <option value='ZW'>[ZW]辛巴威</option>
+                                        </option>
+                                    </select>
+                                </div>
+                                <!-- <div class="form-group col-md-4">
+                                    <label for="inputState">國家</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div> -->
+                                <div class="form-group col">
+                                    <label for="inputZip">郵遞區號</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress">地址</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="台中市西屯區">
+                            </div>
+                            <div class="form-group">
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="pr-3">
+                                    <button type="reset" class="btn btn-danger">取消訂單</button>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">確認付款</button>
+                                </div>
+                            </div>
+                        </form>
+                    
+                </div>
+        </div>
+    </div>
+    <footer class="py-3 bg-light">
+        <div class="d-flex">
+            <div class="ml-5">
+                <p>© Copright 2021 六角學院</p>
+            </div>
+            <div class="ml-5" style="font-weight: bolder;">
+                <a href="#">GitHub</a>
+                <a href="#">　FaceBook</a>
+                <a href="#">　About</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

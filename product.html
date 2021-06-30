@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>嗜食候</title>
+</head>
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    .dropdown-menu-right {
+        right: 0px;
+        left: auto;
+    }
+
+    .bg-cover {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .box-shadow {
+        box-shadow: 3px 2px 10px;
+        transition: 1s;
+    }
+
+    .box-shadow:hover {
+        box-shadow: 3px 3px 20px black;
+    }
+
+    .list-group a:hover {
+        background-color: rgb(113, 162, 236);
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a href="index.html" style="color: lightseagreen;">
+            <i class="fas fa-heart"></i>
+            六角血拚買賣</a>
+        <div class="dropdown ml-auto">
+            <button type="submit"
+                style="position: relative; cursor: pointer; background-color: transparent; border: none;" type="button"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-shopping-cart fa-2x"></i>
+                <span class="badge badge-pill badge-danger" style="left: 25px; top: 0px; position: absolute;">99</span>
+            </button>
+            <div class="dropdown ">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton"
+                    style="min-width: 300px;">
+                    <div class="px-4 py-3">
+                        <h6>已選擇商品</h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr class="align-middle text-center">
+                                    <th scope="col"></th>
+                                    <th scope="col">品項</th>
+                                    <th scope="col">單位</th>
+                                    <th scope="col">金額</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-trash"></i></th>
+                                    <td>馬卡龍</td>
+                                    <td>一件</td>
+                                    <td>9999元</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-trash"></i></th>
+                                    <td>慕斯蛋糕</td>
+                                    <td>一件</td>
+                                    <td>9999元</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="#" class="btn btn-outline-primary btn-block">結帳</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </nav>
+    <div class="jumbotron d-flex align-items-end" style="
+    height: 450px;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(https://images.unsplash.com/photo-1477901492169-d59e6428fc90?w=1350);">
+        <div class="container" style="
+        background-color: rgba(255, 255, 255, 0.4);
+        ">
+            <h2 class="display-4">Hello, world!</h2>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+                to
+                featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
+        </div>
+    </div>
+    <div class="container py-5">
+        <nav aria-label="breadcrumb pl-0">
+            <ol class="breadcrumb bg-transparent">
+                <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                <li class="breadcrumb-item"><a href="#">美食</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Q&A</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="sticky-top" style="top: 20px;">
+                    <h1>嗜食候</h1>
+                    <div class="d-flex justify-content-end align-items-end">
+                        <span>售價 $1,299元</span>
+                        <div class="h3 ml-auto">
+                            <small>特價</small>
+                            <strong class="text-danger">$999元</strong>
+                        </div>
+                    </div>
+                    <hr>數量：
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked>馬卡龍
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option2" autocomplete="off">慕斯蛋糕
+                        </label>
+                        <label class="btn btn-secondary disabled">
+                            <input type="radio" name="options" id="option3" autocomplete="off" class="disabled">白葡萄酒
+                        </label>
+                    </div>
+                    <div class="input-group pt-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">數量</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>請選擇</option>
+                            <option value="1">1件</option>
+                            <option value="2">2件</option>
+                            <option value="3">3件</option>
+                        </select>
+                        <button type="submit" class="btn btn-outline-primary ml-2">加入購物車</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-8 text-center">
+                <h2>嗜食物者為俊傑</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quae repudiandae animi corporis
+                    architecto consequuntur deleniti reprehenderit error, debitis doloremque quidem officiis beatae,
+                    odio dolorum dicta minima ratione explicabo. Molestiae?</p>
+                <h3>客製化甜點</h3>
+                <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTUxfHxtb3Vzc2UlMjBjYWtlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+            </div>
+        </div>
+</div>
+
+        <footer class="py-3 bg-light">
+            <div class="d-flex">
+                <div class="ml-5">
+                    <p>© Copright 2021 六角學院</p>
+                </div>
+                <div class="ml-5" style="font-weight: bolder;">
+                    <a href="#">GitHub</a>
+                    <a href="#">　FaceBook</a>
+                    <a href="#">　About</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
